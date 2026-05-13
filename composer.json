@@ -1,0 +1,12 @@
+{
+  "name": "immanual/wp-site-hardening",
+  "description": "WordPress site hardening plugin.",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Immanual"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
+  "require": {}
+}
