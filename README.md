@@ -34,6 +34,13 @@ add_filter('wpsh_disable_comments', '__return_false');
 add_filter('wpsh_disable_feeds', '__return_false');
 ```
 
+WooCommerce stores with global mini carts, AJAX carts, or cart fragments may need WooCommerce assets and jQuery on every page:
+
+```php
+add_filter('wpsh_dequeue_woocommerce_assets', '__return_false');
+add_filter('wpsh_dequeue_frontend_jquery', '__return_false');
+```
+
 The auth cookie SameSite mode defaults to `Strict`. To use `Lax` instead:
 
 ```php

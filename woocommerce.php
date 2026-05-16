@@ -1,5 +1,10 @@
 <?php
 
+function wpsh_dequeue_woocommerce_assets()
+{
+    return (bool) apply_filters('wpsh_dequeue_woocommerce_assets', true);
+}
+
 /**
  * Check whether the current request is for a WooCommerce page.
  */
@@ -38,7 +43,7 @@ function wpsh_is_woocommerce_page()
  */
 function wpsh_dequeue_woocommerce_assets_on_non_woo_pages()
 {
-    if (! function_exists('is_woocommerce')) {
+    if (! wpsh_dequeue_woocommerce_assets() || ! function_exists('is_woocommerce')) {
         return;
     }
 
